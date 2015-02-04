@@ -1,7 +1,7 @@
 //penser à inclure <script src= "dist/snap.svg-min.js"></script>
-    function pyramide(pourcent1,pourcent2,unite){//unite=% ou €
+    function pyramide(pourcent1,pourcent2,unite,svg){//unite=% ou €
         
-        var s = Snap(400,300);
+        var s = Snap(svg);
         
             var t11 =[0,200,25,200,25,215];//position depart triangle1
             var t12 =[0,200,25,200-2*pourcent1,25,215];//position arrivée
@@ -50,8 +50,8 @@
         
     } 
   
-    function colonne(pourcent1,pourcent2,unite){
-     var s = Snap(400,300);
+    function colonne(pourcent1,pourcent2,unite,svg){
+     var s = Snap(svg);
             
             //coordonnée premiere colonne avant et apres transformation
             var top11 =[0,200,25,185,50,200,25,215];//position depart 
@@ -126,9 +126,9 @@
             s.paper.text(75,230, [pourcent2+unite]).attr({fill: '#e2c037', fontFamily: 'Impact',fontSize: '1em'});
     }
 
-    function bulle(pourcent1,pourcent2,unite){
+    function bulle(pourcent1,pourcent2,unite,svg){
     
-         var s = Snap(500,400);
+         var s = Snap(svg);
          
          //dessin forme blanche
             var carre1 =[0,200,0,100,100,100,100,200];
@@ -199,9 +199,9 @@
         
     }
     
-    function glaconHomme(pourcent1){
+    function glaconHomme(pourcent1,svg){
      
-        var s = Snap(400,300);
+        var s = Snap(svg);
             
           
             var a =0;
@@ -227,16 +227,16 @@
             var rect2 = s.polygon(rect21);
             
             
-            grandRect.attr({   //attributs des triangles
+            grandRect.attr({   
                 fill:'white',
             });
             
-            rect1.attr({   //attributs des triangles
-                fill:"#28914b",
+            rect1.attr({   
+                fill:"#393535",
             });
             
-            rect2.attr({   //attributs des triangles
-                fill:"#28914b",
+            rect2.attr({   
+                fill:"#393535",
             });
             
             
@@ -267,9 +267,9 @@
         
     }
     
-    function glaconFemme(pourcent1){
+    function glaconFemme(pourcent1,svg){
      
-        var s = Snap(400,300);
+        var s = Snap(svg);
             
           
             var a =0;
@@ -295,16 +295,16 @@
             var rect2 = s.polygon(rect21);
             
             
-            grandRect.attr({   //attributs des triangles
+            grandRect.attr({   
                 fill:'white',
             });
             
-            rect1.attr({   //attributs des triangles
-                fill:"#e2c037",
+            rect1.attr({   
+                fill:"#393535",
             });
             
-            rect2.attr({   //attributs des triangles
-                fill:"#e2c037",
+            rect2.attr({   
+                fill:"#393535",
             });
             
             
